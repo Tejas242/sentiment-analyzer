@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 export default function Home() {
 
+  const gitRepoUrl = 'https://github.com/Tejas242/sentiment-analyzer';
   // Keep track of the classification result and the model loading status.
   const [result, setResult] = useState(null);
   const [ready, setReady] = useState(null);
@@ -40,6 +41,9 @@ export default function Home() {
             (!ready || !result) ? 'Loading...' : JSON.stringify(result, null, 2)}
         </pre>
       )}
+
+      
+      <footer className="mt-12">Check on <u><a href={gitRepoUrl}>GitHub</a></u></footer>
     </main>
   )
 }
